@@ -36,19 +36,17 @@ https://pixel-pioneers.bpub.adhoc.com/
 
 ## Data storage
 
-AdHoc stores each tenant's data separately to provide a higher degree of data isolation and offer more options for tenant customization.
+AdHoc stores each tenant's data separately to achieve better security, scalability, and customization:
+
+- **Security**: Prevent cross-tenant data leaks, ensuring the highest security for your client and user data.
+- **Scalability**: Offer as much storage and processing capacity as your agency requires without affecting other tenants.
+- **Customization**: Tailor data schemas to address your agency's specific requirements.
 
 The following diagram illustrates our approach to storing tenant data in dedicated databases.
 
 ![A diagram that illustrates AdHoc's approach to storing tenant data in dedicated databases.](./images/architecture/adhoc-data-storage.svg)
 
 > **Note:** We are open to adapting our data storage approaches to your needs. For instance, if you want to implement multiple client-based tenants, we can either set up dedicated databases for each tenant or a single database that stores all agency data. [Get in touch with our sales representatives](https://dummy-link.com) to learn more.
-
-By implementing dedicated databases for each tenant, we achieve the following:
-
-- **Security**: Prevent cross-tenant data leaks, ensuring the highest security for your client and user data.
-- **Scalability**: Offer as much storage and processing capacity as your agency requires without affecting other tenants.
-- **Customization**: Tailor data schemas to address your agency's specific requirements.
 
 ## User governance
 
