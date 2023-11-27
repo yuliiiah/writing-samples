@@ -4,7 +4,7 @@ Audience: Technical decision-makers
 
 # Architecture overview
 
-This page explores multitenancy, data storage, and user governance in AdHoc to offer a high-level overview of our architecture and enable you to decide whether AdHoc is the right solution for your digital agency.
+This page explores multitenancy, data storage, and user governance in the context of AdHoc. We aim to provide you with a high-level overview of the AdHoc architecture and enable you to decide whether AdHoc is the right solution for your digital agency.
 
 ## What is multitenancy?
 
@@ -14,7 +14,7 @@ Multitenancy is a software architecture paradigm in which a single software inst
 
 In AdHoc, tenants represent digital agencies and their clients.
 
-We maintain each tenant's configuration in a separate database. Combined with AdHoc Authz, this approach ensures that users interact with the appropriate data based on their respective access and permissions. This means your tenant can have an isolated set of users, data, products, and workflows—without interference from or overlap with other tenants.
+We maintain each tenant's configuration in a separate database. Combined with [AdHoc Authz](https://dummy-link.com), this approach ensures that users interact with the appropriate data based on their respective access and permissions. This means your tenant can have an isolated set of users, data, products, and workflows—without interference from or overlap with other tenants.
 
 AdHoc can also house multiple tenants for each client your agency works with, effectively mimicking its internal hierarchy. This approach enables teams working with different clients to avoid confusion and data crossover. Each team interacts only with the data and projects relevant to their current assignments, and the baseline tenant configuration is maintained at the agency level.
 
@@ -30,7 +30,7 @@ https://creative-clicks.adhoc.com/
 # Tenant for Pixel Pioneers
 https://pixel-pioneers.adhoc.com/
 
-# Tenant for the BPub client in Pixel Pioneers
+# Tenant for the BPub client from Pixel Pioneers
 https://pixel-pioneers.bpub.adhoc.com/
 ```
 
@@ -38,19 +38,19 @@ https://pixel-pioneers.bpub.adhoc.com/
 
 AdHoc stores each tenant's data separately to achieve better security, scalability, and customization:
 
-- **Security**: Prevent cross-tenant data leaks, ensuring the highest security for your client and user data.
-- **Scalability**: Offer as much storage and processing capacity as your agency requires without affecting other tenants.
+- **Security**: Prevent cross-tenant data leaks and provide granular user access, ensuring the highest security for your client and user data.
+- **Scalability**: Offer as much storage and processing capacity as your agency or client requires without affecting other tenants.
 - **Customization**: Tailor data schemas to address your agency's specific requirements.
 
 The following diagram illustrates our approach to storing tenant data in dedicated databases.
 
 ![A diagram that illustrates AdHoc's approach to storing tenant data in dedicated databases.](./images/architecture/adhoc-data-storage.svg)
 
-> **Note:** We are open to adapting our data storage approaches to your needs. For instance, if you want to implement multiple client-based tenants, we can either set up dedicated databases for each tenant or a single database that stores all agency data. [Get in touch with our sales representatives](https://dummy-link.com) to learn more.
+> **Note:** We are open to adapting our data storage approaches to your needs. For instance, if you want to implement multiple client-based tenants, we can either set up dedicated databases for each client tenant or a single database that stores all agency data. [Get in touch with our sales representatives](https://dummy-link.com) to learn more.
 
 ## User governance
 
-AdHoc has a built-in authorization and access management module, AdHoc Authz, which offers control over user access to different features and data within tenants. To learn more about this module, [refer to the AdHoc Authz docs](https://dummy-link.com).
+AdHoc has a built-in authorization and access management module, AdHoc Authz, which offers control over user access to different features and data within tenants.
 
 Depending on the AdHoc Authz configuration, your users can have access to a single agency tenant or the primary agency tenant and multiple client tenants. This approach to user governance ensures that agencies with client-based tenants can have employees working on several projects at a time.
 
